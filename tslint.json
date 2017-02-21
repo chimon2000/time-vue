@@ -1,0 +1,10 @@
+{
+    "extends": "tslint-config-standard",
+    "rules": {
+        "ter-indent": [
+            false,
+            4
+        ],
+        "curly": false
+    }
+}

@@ -2,11 +2,12 @@ import * as Vue from 'vue'
 import * as VueRouter from 'vue-router'
 import HomeComponent from './home/home.vue'
 import ErrorComponent from './error/error.vue'
-import LoginComponent from './login/login.vue';
-import app from './shared/feathers.service';
+import LoginComponent from './login/login.vue'
+import app from './shared/feathers.service'
 Vue.use(VueRouter)
 
 let authenticated = false
+const handleAuthenticated = () => authenticated = true
 
 export const router = new VueRouter({
   /*
@@ -51,7 +52,5 @@ router.beforeEach((to, from, next) => {
     .then(() => next())
     .catch(() => next('/login'))
 })
-
-const handleAuthenticated = () => authenticated = true
 
 export default router

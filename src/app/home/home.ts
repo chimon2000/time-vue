@@ -1,10 +1,10 @@
-var moveForce = 30
-var rotateForce = 40
+let moveForce = 30
+let rotateForce = 40
 
 import * as Quasar from 'quasar'
 import * as Vue from 'vue'
 import Component from 'vue-class-component'
-import { service } from '../shared/feathers.service';
+import { service } from '../shared/feathers.service'
 
 let userService = service('users')
 let timesService = service('times')
@@ -26,12 +26,12 @@ export default class Index extends Vue {
 
     times: any[] = []
 
-    onCreateTime(time) {
+    onCreateTime (time) {
         timesService.create(time)
         // this.times.push(time)
     }
 
-    mounted() {
+    mounted () {
         timesService.find({
             query: {
                 $sort: { createdAt: -1 },

@@ -11,9 +11,10 @@ export class Time {
     readonly date: string = moment().format('YYYY-MM-DD')
     readonly hours = ''
 
-    static fromJsonList = (jsonList: any[]) => jsonList.map(json => Time.fromJson(json))
-    static fromJson = (json) => new Time(json)
-    constructor(params: any = {}) {
+    constructor (params: any = {}) {
         Object.assign(this, {}, params)
     }
+
+    static fromJsonList = (jsonList: any[]) => jsonList.map(json => Time.fromJson(json))
+    static fromJson = (json) => new Time(json)
 }

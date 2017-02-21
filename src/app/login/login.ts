@@ -1,11 +1,11 @@
 import * as Vue from 'vue'
 import Component from 'vue-class-component'
 import * as Quasar from 'quasar'
-import app from '../shared/feathers.service';
+import app from '../shared/feathers.service'
 
 @Component({
     computed: {
-        isLoggedIn() {
+        isLoggedIn () {
             return !!this.$store.state.identity.identity
         }
     }
@@ -15,11 +15,11 @@ export default class Index extends Vue {
     email = ''
     password = ''
 
-    mounted() {
+    mounted () {
         console.log('mounted')
     }
 
-    login() {
+    login () {
         app
             .authenticate({
                 type: 'local',

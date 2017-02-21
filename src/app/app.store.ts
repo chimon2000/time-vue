@@ -1,12 +1,12 @@
 import * as Vue from 'vue'
 import * as Vuex from 'vuex'
-import {Store} from 'vuex';
+import { Store } from 'vuex'
 
 Vue.use(Vuex)
 
-const LOGIN = "LOGIN"
-const LOGIN_SUCCESS  = "LOGIN"
-const LOGOUT  = "LOGIN"
+const LOGIN = 'LOGIN'
+const LOGIN_SUCCESS = 'LOGIN'
+const LOGOUT = 'LOGIN'
 
 type Identity = string
 
@@ -31,7 +31,7 @@ export default new Store({
   mutations: {
     [LOGOUT] (state) {
       state.identity.pending = false
-      state.identity.identity = ""
+      state.identity.identity = ''
     },
     [LOGIN] (state) {
       state.identity.pending = true

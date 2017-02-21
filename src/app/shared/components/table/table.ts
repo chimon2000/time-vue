@@ -6,5 +6,5 @@ import * as Quasar from 'quasar'
     props: ['data', 'tableOptions']
 })
 export default class Table extends Vue {
-    onSelectRow() { }
+    onSelectRow () { console.log('selected') }
 }

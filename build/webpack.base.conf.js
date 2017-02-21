@@ -87,9 +87,6 @@ module.exports = {
       minimize: env.prod,
       options: {
         context: path.resolve(__dirname, '../src'),
-        eslint: {
-          formatter: require('eslint-friendly-formatter')
-        },
         postcss: cssUtils.postcss
       }
     }),
